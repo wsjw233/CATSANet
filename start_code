@@ -1,0 +1,20 @@
+CUDA_VISIVLE_DEVICES=0 \
+python train.py \
+--name catsanet \
+--img_aug \
+--batch_size 64 \
+--MLM \
+--loss_names 'sdm+mlm+id+itc+pacl' \
+--root_dir '/home/c402/ReID数据' \
+--num_epoch 150 \
+--id_loss_weight 0.5 \
+--mlm_loss_weight 0.5 \
+--pacl_loss_weight 0.02 \
+--pacl_ot_reg 0.05 \
+--pacl_ot_iters 10 \
+--dataset_name 'RSTPReid' 
+
+
+
+
+
